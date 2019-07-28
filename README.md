@@ -128,7 +128,7 @@ vn.py (http://www.vnpy.cn) 是基于Python的开源量化交易系统开发框�
 
 7. Python高性能K线图表（vnpy.chart），支持大数据量图表显示以及实时数据更新功能。
 
-8. [社区论坛](http://www.vnpy.com)和[知乎专栏](http://zhuanlan.zhihu.com/vn-py)，内容包括vn.py项目的开发教程和Python在量化交易领域的应用研究等内容。
+8. [VNPY首页](http://www.vnpy.cn)和[知乎专栏](http://zhuanlan.zhihu.com/vn-py)，内容包括vn.py项目的开发教程和Python在量化交易领域的应用研究等内容。
 
 9.  官方交流群262656087（QQ），管理严格（定期清除长期潜水的成员），入群费将捐赠给vn.py社区基金。
 
@@ -140,7 +140,7 @@ vn.py (http://www.vnpy.cn) 是基于Python的开源量化交易系统开发框�
 
 ## 安装步骤
 
-在[这里](https://github.com/wdgwz/vnpy/releases)下载最新版本，解压后运行以下命令安装：
+在[这里](https://github.com/vnpycn/vnpy/releases)下载最新版本，解压后运行以下命令安装：
 **Windows**
 
     install.bat
@@ -206,9 +206,9 @@ if __name__ == "__main__":
 
 vn.py使用Github托管其源代码，如果希望贡献代码请使用github的PR(Pull Request)的流程:
 
-1. [创建 Issue](https://github.com/wdgwz/vnpy/issues/new) - 对于较大的改动(如新功能，大型重构等)最好先开issue讨论一下，较小的improvement(如文档改进，bugfix等)直接发PR即可
+1. [创建 Issue](https://github.com/vnpycn/vnpy/issues/new) - 对于较大的改动(如新功能，大型重构等)最好先开issue讨论一下，较小的improvement(如文档改进，bugfix等)直接发PR即可
 
-2. Fork [vn.py](https://github.com/wdgwz/vnpy) - 点击右上角**Fork**按钮
+2. Fork [vn.py](https://github.com/vnpycn/vnpy) - 点击右上角**Fork**按钮
 
 3. Clone你自己的fork: ```git clone https://github.com/$userid/vnpy.git```
 	* 如果你的fork已经过时，需要手动sync：[https://help.github.com/articles/syncing-a-fork/](https://help.github.com/articles/syncing-a-fork/)
@@ -239,13 +239,13 @@ VNPY原始作者：用Python的程序员 还有其他为VNPY做出贡献的其�
 
 ## 其他内容
 
-* [获取帮助](https://github.com/wdgwz/vnpy/blob/dev/docs/SUPPORT.md)
-* [社区行为准侧](https://github.com/wdgwz/vnpy/blob/dev/docs/CODE_OF_CONDUCT.md)
-* [Issue模板](https://github.com/wdgwz/vnpy/blob/dev/docs/ISSUE_TEMPLATE.md)
-* [PR模板](https://github.com/wdgwz/vnpy/blob/dev/docs/PULL_REQUEST_TEMPLATE.md)
+* [获取帮助](https://github.com/vnpycn/vnpy/blob/dev/docs/SUPPORT.md)
+* [社区行为准侧](https://github.com/vnpycn/vnpy/blob/dev/docs/CODE_OF_CONDUCT.md)
+* [Issue模板](https://github.com/vnpycn/vnpy/blob/dev/docs/ISSUE_TEMPLATE.md)
+* [PR模板](https://github.com/vnpycn/vnpy/blob/dev/docs/PULL_REQUEST_TEMPLATE.md)
 
-
-
+ [.](https://github.com/wdgwz/vnpy) 
+ [.](https://www.vnpy.cn) 
 ## 版权说明
 
 MIT
