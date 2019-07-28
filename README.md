@@ -44,11 +44,10 @@ vn.py (http://www.vnpy.cn) 是基于Python的开源量化交易系统开发框�
 
 [A股交易工具] http://www.quicklib.net
 
-使用过程中有任何疑问，请查看[**vn.py项目文档**](https://www.vnpy.cn) 
 
 官方微信公众号：**vnpy-community**，接下来将在公众号中陆续上线各种关于vn.py的使用教程，欢迎关注。
 
-2.0版本基于Python 3.7全新重构开发，如需Python 2上的版本请点击：[长期支持版本v1.9.2 LTS](https://github.com/vnpy/vnpy/tree/v1.9.2-LTS)。
+2.0版本基于Python 3.7全新重构开发，不再提供对Python2.0的支持)。
 
 ## 功能特点
 
