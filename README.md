@@ -1,4 +1,4 @@
-# By Traders, For Traders.
+﻿# By Traders, For Traders.
 
 <p align="center">
   <img src ="https://vnpy.oss-cn-shanghai.aliyuncs.com/vnpy-logo.png"/>
@@ -129,7 +129,7 @@ vn.py (http://www.vnpy.cn) 是基于Python的开源量化交易系统开发框�
 
 8. [VNPY首页](http://www.vnpy.cn)和[知乎专栏](http://zhuanlan.zhihu.com/vn-py)，内容包括vn.py项目的开发教程和Python在量化交易领域的应用研究等内容。
 
-9.  官方交流群262656087（QQ），管理严格（定期清除长期潜水的成员），入群费将捐赠给vn.py社区基金。
+9.  官方交流群236828089（QQ），管理严格（定期清除长期潜水的成员），入群费将捐赠给vn.py社区基金。
 
 ## 环境准备
 
