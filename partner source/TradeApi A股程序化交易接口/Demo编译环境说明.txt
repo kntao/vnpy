@@ -1,0 +1,5 @@
+Visual Studio2015及以上都可以编译Demo.exe
+Bin目录是已经编译好的Demo.exe
+
+
+库是C++ 开发的DLL文件，理论上支持C++,python,c#,Java等多种编程语言

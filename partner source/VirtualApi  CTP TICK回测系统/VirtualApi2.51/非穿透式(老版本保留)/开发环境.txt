@@ -1,0 +1,15 @@
+请使用Visual Studio2015、Visual Studio2017及以后的版本打开Demo里的MyAutoTrader.sln，
+可以C++ Demo为基础进行二次开发
+
+当然VirutalApi也支持多种编程语言，支持所有基于CTP的开源框架和自编程序，
+请根据框架和自编程序特点替换DLL和lib文件重新编译。
+
+
+Bin目录是编译好的程序，可以直接运行调试
+CTP Demo/Bin(已编译)/AutoTrader.exe 是原生CTP的Demo，已编译好的应用程序。
+VritualApi For CTP Demo/Bin(已编译)/AutoTrader.exe  是VirtualApi Demo已编译好的应用程序，运行直接进行回测。
+
+上期CTP官网
+可以注册模拟账户，下载原生CTP api，CTP Demo可用于该模拟的程序化交易，
+http://www.simnow.com.cn/
+或用于www.kaihucn.cn 开户的实盘

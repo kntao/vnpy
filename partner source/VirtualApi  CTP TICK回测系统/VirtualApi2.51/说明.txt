@@ -1,0 +1,49 @@
+VirtualApi理论支持任何直接调用原生CTP api的策略程序，支持任何采用CTP api的框架，
+VNPY,Quicklib，支持C++、python程序、JAVA、C# 等，可以说无所不兼容。并且实盘代码可以在不改动
+一行代码前提下实现回测。
+VirtualApi申请了国家发明专利，如果有类似CTP API需要VirtualApi.cn的支持，请联系QQ 147423661 并提供测试环境以便方便进行封装。
+QQ群：25884087 ，如果已经在林 QQ147423661的其他群，则无需重复添加，只要在其中一个群即可。
+
+VirtualApi第一期支持期货CTP API接口，免费提供给广大的期货CTP程序开发爱好者。
+
+CTP  API是上海期货交易所的API,支持所有期货公司期货实盘账户和SIMNOW CTP模拟账户
+模拟账户注册网址
+http://www.simnow.com.cn
+实盘期货账户（商品期货、股指期货）开户网址
+http://www.kaihucn.cn
+
+[关于virtualapi]
+virtualapi是一种简单易用的回测方式，这种方式可以在不修改一行代码的情况下进行回测，即回测代码即实盘代码，该方案通过模拟原始API的方式进行回测，回测速度极快，并申请了国家专利。
+
+2019年6月请访问此网站
+http://www.virtualapi.cn
+
+VritualApi For CTP目录和CTP API目录，这2个目录下的DEMO，代码完全一样，仅仅是替换了thostmduserapi.lib、thostmduserapi.dll、thosttraderapi.lib、thosttraderapi.dll 这4个文件重新编译，
+并将编译好的exe程序目录放入Graph.exe、price.exe、list.csv这3个文件，运行AutoTrade.exe即可实现本地TICK级回测。
+list.csv保存的是依次读取的tick数据文件的路径。
+
+需要下载数据文件，并修改list.csv目录路径。
+行情数据可以在www.mdshare.cn下载和http://www.pythonpai.com/topic/4206/下载
+其中数据格式为Dataupdate.exe规定的CSV字段顺序
+采集工具http://www.quicklib.cn/下载
+具体网址为 
+http://www.quicklib.cn/download/Quicklib_DataCollect_Windows.rar
+
+通过直接替换CTP的api，同时将list.csv、Graph.exe、price.exe放到程序编译的目录下面。
+直接运行，直接进行回测。
+默认资金为50万。
+生成临时文件qy.csv保存资金曲线数据
+生成临时文件md.csv保存回测期间的分时数据
+clean.bat 运行清理 qy.csv和md.csv 文件。
+
+本目录的CTP API及对应的VirtualAPI For CTP为非穿透式监管的版本。
+更新的版本请在2019年6月以后关注官网更新
+
+在http://www.kaihucn.cn 开户即可获得virtualapi的高级版本
+
+其他推荐网址
+http://www.coolquant.cn
+http://www.quicklib.cn
+http://www.kaihucn.cn
+http://www.quicklib.cn
+

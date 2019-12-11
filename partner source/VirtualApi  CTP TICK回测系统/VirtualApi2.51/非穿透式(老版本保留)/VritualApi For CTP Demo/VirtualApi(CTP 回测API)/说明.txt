@@ -1,0 +1,9 @@
+[关于virtualapi api]
+http://vwww.virtualapi.cn
+
+直接替换CTP的api，同时将list.csv、Graph.exe、price.exe放到程序编译的目录下面。
+直接运行，直接进行回测。
+默认资金为50万。
+生成临时文件qy.csv保存资金曲线数据
+生成临时文件md.csv保存回测期间的分时数据
+clean.bat 运行清理 qy.csv和md.csv 文件。

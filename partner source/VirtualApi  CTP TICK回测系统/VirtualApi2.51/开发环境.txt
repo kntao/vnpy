@@ -1,0 +1,4 @@
+Windows系统
+需安装微软 Visual Studio2015或Visual Studio2017 的C++部分
+打开Demo项目目录下的MyAutoTrader.sln打开项目
+

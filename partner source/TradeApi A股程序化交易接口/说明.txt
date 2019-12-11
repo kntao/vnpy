@@ -1,0 +1,20 @@
+购买2500元/套  QQ 147423661
+
+QuicklibTrade是A股行情接口API，
+在www.quicklib.net注册后，
+在www.kaihucn.cn期货开户,绑定账户后，免费获得永久授权.
+
+
+
+TradeApi是A股程序化交易API接口
+1.3 测试版部分功能待完善,暂时不支持调用同花顺下单客户端交易请等1.4正式版发布
+请及时关注www.pythonpai.com发布消息和官网www.tradeapi.cn更新
+在运行同花顺5.0的电脑上运行TradeAgent.exe服务端，
+再通过API通过TradeAgent.exe的IP地址，进行网络连接，发送下单指令。
+www.tradeapi.cn
+步骤：
+1.安装数据库MSSQL或直接设置Access数据库文件路径
+2.运行同花顺下单5.0
+3.开启TrdeAgent代理程序
+4.运行API的Demo，向TradeAgent下交易指令，TradeAgent调用同花顺5.0下单。
+

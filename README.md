@@ -1,250 +1,213 @@
-# By Traders, For Traders.
+﻿# By Traders, For Traders.
+
+<p align="center">
+  <img src ="https://vnpy.oss-cn-shanghai.aliyuncs.com/vnpy-logo.png"/>
+</p>
+
+<p align="center">
+    <img src ="https://img.shields.io/badge/version-2.0.6-blueviolet.svg"/>
+    <img src ="https://img.shields.io/badge/platform-windows|linux|macos-yellow.svg"/>
+    <img src ="https://img.shields.io/badge/python-3.7-blue.svg" />
+    <img src ="https://img.shields.io/travis/com/vnpy/vnpy/master.svg"/>
+    <img src ="https://img.shields.io/github/license/vnpy/vnpy.svg?color=orange"/>
+</p>
+
+vn.py是一套基于Python的开源量化交易系统开发框架，于2015年1月正式发布，在开源社区5年持续不断的贡献下一步步成长为全功能量化交易平台，目前国内外金融机构用户已经超过300家，包括：私募基金、证券自营和资管、期货资管和子公司、高校研究机构、自营交易公司、交易所、Token Fund等。
+对vn.py和量化交易新手的建议：
+
+1.Python 适合用于快速开发，解释性语言导致了运行效率比较低，但是开发速度相对于其他语言却很高。当然Python做数据分析的效率比较高，但是做底层会下降一个 数量级的原因，所以尽可能建议用成熟的资管系统去实现多账户。目前虚拟币市场比较混乱，厂商的API水平参差不齐，而A股禁止使用资管系统，外盘相对而言 波动小是一个更成熟的市场，国内的期货的API是最成熟和完善的，那么期货的资管也很丰富，包括了信管家、融航、酷操盘手等。
+
+2.因为搭建整个量化平台需要涉及很多，包括数据处理，策略开发，底层搭建，而这些工作在私募基金是由一个团队去完成的，如果是一个爱好者自己做怎么的也得3-5年吧。所以给出的建议是，尽可能的将精力放在策略开发上，对底层和框架可以拿来主义。
+
+3.对一些人工智能库该怎么用，对大多数程序员来说也只是学会调用，能做到调参的已经是比较高的水平了。若想真正做到精通人工智能算法，对程序员也 不是一个简单的工作，更不要说一般爱好者了，人工智能算法需要的是优秀的算法工程师 ， 要熟练的掌握高等数学、线性代数、离散数学、组合数学、矩阵论、概率统计等数学课程，数据结构 （树、链表、矩阵、图）等各种典型的数据结构以及常用的查找和排序算法（比如冒泡排序、快速排序、二分查找、希尔排序等，熟悉各自算法的时间复杂度）。对 于通用型的算法思想，比如递推、分治、贪心、递归、动态规划等算法策略要熟记于心并能灵活运用。要做好人工智能算法这一些都离不开深厚的数学功底。。 所以所以对一般量化交易爱好者而言，一上来不要追求人工智能去开发策略。
+
+4.vn.py python框架也在不断进化，vn.py目前最大的问题是性能问题，相信未来还有更好的框架出现，建议爱好者将精力方在策略开发上，策略相比平台则是更保值的东西。
+
+vn.py (http://www.vnpy.cn) 是基于Python的开源量化交易系统开发框架，起源于中国国内私募基金的自主交易系统。2015年1月项目正式在Github发布，在开源社区数年持续 不断的贡献下，已经从早期的交易API接口封装，一步步成长为一套多市场多接口的量化交易平台。随着量化交易行业业内关注度的上升，用户群体也日渐多样 化，包括：高校研究机构、专业个人投资者、私募基金、期货资管、证券自营和资管等等。 vn.py由于属于纯Python架构不适合搭建多账户系统，因为Python适合数据处理，但不适合多账户的并发。如需要多账户，消除原始VN.PY性 能架构缺陷，建议采用资管系统来实现。 期货资管系统推荐酷操盘手系列 http://www.kucps.com/ 虽然是商业化产品，但是是可以获得免费使用的。
+
+其他量化交易网站，和支持VN.PY扩展功能
 
 
-![vn.py-logo](http://vnpy.oss-cn-shanghai.aliyuncs.com/vnpy-logo.png)
+[支持VNPY和任意自编程序的底层仿真TICK级回测系统，实盘代码和回测代码100%一致] http://www.virtualapi.cn/
 
----
+[实盘低佣金开户，为了给广大量化交易爱好者提供便利，我们帮大家和期货公司谈的手续费非常低了，交易所标准加1分，交反40~90%支持CTP接口] http://www.kaihucn.cn/
 
-### 简介
+[上海期货交易所CTP接口，支持模拟账户注册] http://www.simnow.com.cn
 
-vn.py是基于Python的开源量化交易系统开发框架，起源于国内私募基金的自主交易系统。2015年1月项目正式发布，在开源社区4年持续不断的贡献下，已经从早期的交易API接口封装，一步步成长为一套全功能量化交易平台。随着业内关注度的上升，用户群体也日渐多样化，包括：私募基金、证券自营和资管、期货资管和子公司、高校研究机构、专业个人投资者等等。
+[酷操盘手资管软件、酷操盘手跟单软件系列] http://www.kucps.com/
 
----
+[行情数据免费下载] http://www.mdshare.cn/
 
-### 项目结构
+[量化资源导航] http://www.pythonpai.cn
+
+[量化交易社区] http://www.pythonpai.com
+
+[A股交易工具] http://www.quicklib.net
+
+
+官方微信公众号：**vnpy-community**，接下来将在公众号中陆续上线各种关于vn.py的使用教程，欢迎关注。
+
+2.0版本基于Python 3.7全新重构开发，不再提供对Python2.0的支持)。
+
+## 功能特点
 
 1. 全功能量化交易平台（vnpy.trader），整合了多种交易接口，并针对具体策略算法和功能开发提供了简洁易用的API，用于快速构建交易员所需的量化交易应用。
 
-    * 覆盖国内外所有交易品种（股票、期货、期权、外汇、外盘、CFD、数字货币）的交易接口：
+2. 覆盖国内外所有交易品种的交易接口（vnpy.gateway）：
 
-        * 国内市场
+    * 国内市场
 
-            * CTP(ctpGateway)
+        * CTP(ctp)：国内期货、期权
 
-            * 飞马(femasGateway)
+        * CTP Mini(mini)：国内期货、期权
 
-            * 中泰证券XTP(xtpGateway)
+        * 飞马(femas)：国内期货
 
-            * 中信证券期权(cshshlpGateway)
+        * 宽睿(oes)：国内证券（A股）
 
-            * 金仕达黄金(ksgoldGateway)
+        * 中泰XTP(xtp)：国内证券（A股）
 
-            * 金仕达期权(ksotpGateway)
+        * 华鑫奇点(tora)：国内证券（A股）
 
-            * 飞鼠(sgitGateway)
+    * 海外市场
+     
+        * 富途证券(futu)：港股、美股
 
-            * 飞创(xspeedGateway)
+        * 老虎证券(tiger)：全球证券、期货、期权、外汇等
 
-            * 飞创证券(secGateway)
+        * Interactive Brokers(ib)：全球证券、期货、期权、外汇等
 
-            * QDP(qdpGateway)
+        * 易盛9.0外盘(tap)：全球期货
 
-            * Wind行情(windGateway)
+    * 数字货币
 
-        * 海外市场
+        * BitMEX(bitmex)：数字货币期货、期权、永续合约
 
-            * 富途证券(futuGateway)
+        * OKEX合约(okexf)：数字货币期货
 
-            * 上海直达期货(shzdGateway)
+        * 火币合约(hbdm)：数字货币期货
 
-            * Interactive Brokers(ibGateway)
+        * 币安(binance)：数字货币现货
 
-            * 福汇(fxcmGateway)
+        * OKEX(okex)：数字货币现货
 
+        * 火币(huobi)：数字货币现货
 
-        * 数字货币
+        * Bitfinex(bitfinex)：数字货币现货
 
-            * OKEX(okexGateway)
+        * 1Token(onetoken)：数字货币券商（现货、期货）
 
-            * OKEX合约(okexfGateway)
-
-            * 火币(huobiGateway)
-
-            * 币安(binanceGateway)
-
-            * BitMEX (bitmexGateway)
-
-            * Bitfinex (bitfinexGateway)
-
-            * Coinbase Pro (coinbaseGateway)
-
-            * FCoin (fcoinGateway)
-
-            * BigOne (bigoneGateway)
-
-            * LBank(lbankGateway)
-
-            * CCXT (ccxtGateway)
-
-    * 经过开源社区大量用户实盘检验，做到开箱即用的各类量化策略交易应用（包括逻辑层和界面层）：
+    * 特殊应用
     
-        * CtaStrategy：CTA策略引擎模块，在保持易用性的同时，允许用户针对CTA类策略运行过程中委托的报撤行为进行细粒度控制（降低交易滑点、实现高频策略）
+        * RPC服务(rpc)：跨进程通讯接口，用于分布式架构
 
-        * SpreadTrading：价差交易模块，根据用户的配置自动实现价差组合的深度行情以及持仓变化计算，同时内置的交易算法SniperAlgo可以满足大部分到价成交策略的需求，用户也可以基于AlgoTemplate开发更复杂的价差算法
+3. 开箱即用的各类量化策略交易应用（vnpy.app）：
 
-        * OptionMaster：期权交易模块，强大的期权投资组合管理功能，结合基于Cython开发的高效期权定价模型，支持毫秒级别的整体希腊值持仓风险计算，用户可以基于期权交易引擎OmEngine快速开发各类复杂期权交易应用
+    * cta_strategy：CTA策略引擎模块，在保持易用性的同时，允许用户针对CTA类策略运行过程中委托的报撤行为进行细粒度控制（降低交易滑点、实现高频策略）
 
-        * AlgoTrading：算法交易模块，提供多种常用的智能交易算法：TWAP、Sniper、BestLimit、Iceberg、Arbitrage等等，支持数据库配置保存、CSV文件加载启动以及RPC跨进程算法交易服务
+    * cta_backtester：CTA策略回测模块，无需使用Jupyter Notebook，直接使用图形界面直接进行策略回测分析、参数优化等相关工作
 
-        * TradeCopy：复制交易模块，用户可以通过发布者Provider进程来对外提供交易策略信号（手动、策略均可），订阅者Subscriber进程根据收到的信号自动执行同步交易，简洁快速得实现一拖多账户交易功能
+    * algo_trading：算法交易模块，提供多种常用的智能交易算法：TWAP、Sniper、Iceberg、BestLimit等等，支持常用算法配置保存
 
-        * RiskManager：事前风控模块，负责在交易系统将任何交易请求发出到柜台前的一系列标准检查操作，支持用户自定义风控规则的扩展
+    * script_trader：脚本策略模块，针对多标的组合类交易策略设计，同时也可以直接在命令行中实现REPL指令形式的交易，不支持回测功能
 
-        * DataRecorder：实盘行情记录，支持Tick和K线数据的落地，用于策略开发回测以及实盘运行初始化
+    * rpc_service：RPC服务模块，允许将某一VN Trader进程启动为服务端，作为统一的行情和交易路由通道，允许多客户端同时连接，实现多进程分布式系统
 
-        * RpcService：RPC跨进程调用服务，基于MainEngineProxy组件，用户可以如同开发单一进程应用搬开发多进程架构的复杂交易应用
+    * csv_loader：CSV历史数据加载器，用于加载CSV格式文件中的历史数据到平台数据库中，用于策略的回测研究以及实盘初始化等功能，支持自定义数据表头格式
 
-        * RtdService：EXCEL RTD服务组件，通过pyxll模块提供EXCEL表格系统对VN Trader系统内所有数据的访问
+    * data_recorder：行情记录模块，基于图形界面进行配置，根据需求实时录制Tick或者K线行情到数据库中，用于策略回测或者实盘初始化
 
-2. Python交易API接口封装（vnpy.api），提供上述交易接口的底层对接实现
+    * risk_manager：风险管理模块，提供包括交易流控、下单数量、活动委托、撤单总数等规则的统计和限制，有效实现前端风控功能
 
-3. 简洁易用的事件驱动引擎（vnpy.event），作为事件驱动型交易程序的核心
+4. Python交易API接口封装（vnpy.api），提供上述交易接口的底层对接实现。
 
-4. 支持服务器端数据推送的RPC框架（vnpy.rpc），用于实现多进程分布式架构的交易系统
+5. 简洁易用的事件驱动引擎（vnpy.event），作为事件驱动型交易程序的核心。
 
-5. 数据相关的API接口（vnpy.data），用于构建和更新历史行情数据库，目前包括：
+6. 跨进程通讯标准组件（vnpy.rpc），用于实现分布式部署的复杂交易系统。
 
-    * 上海中期历史行情服务（shcifco）
+7. Python高性能K线图表（vnpy.chart），支持大数据量图表显示以及实时数据更新功能。
 
-6. 关于vn.py项目的应用演示（examples），对于新手而言可以从这里开始学习vn.py项目的使用方式
+8. [VNPY首页](http://www.vnpy.cn)和[知乎专栏](http://zhuanlan.zhihu.com/vn-py)，内容包括vn.py项目的开发教程和Python在量化交易领域的应用研究等内容。
 
-7. vn.py项目的Docker镜像（docker）：
+9.  官方交流群236828089（QQ），管理严格（定期清除长期潜水的成员），入群费将捐赠给vn.py社区基金。
 
-    * web docker，在Docker中启动基于Web交易的交易服务器WebTrader，在浏览器中实现CTA策略的运维操作
+## 环境准备
 
-    * vnc docker，内嵌了完整的vn.py图形化运行环境（Linux），并通过VNC Server对外提供虚拟桌面访问
+* 推荐使用vn.py团队为量化交易专门打造的Python发行版[VNStudio-2.0.4](https://download.vnpy.com/vnstudio-2.0.4-r.exe)，内置了最新版的vn.py框架以及VN Station量化管理平台，无需手动安装
+* 支持的系统版本：Windows 7以上/Windows Server 2008以上/Ubuntu 18.04 LTS
+* 支持的Python版本：Python 3.7 64位（**注意必须是Python 3.7 64位版本**）
 
-9. [社区论坛](http://www.vnpy.com)和[知乎专栏](http://zhuanlan.zhihu.com/vn-py)，内容包括vn.py项目的开发教程和Python在量化交易领域的应用研究等内容
+## 安装步骤
 
-10. 官方交流QQ群262656087，管理严格（定期清除长期潜水的成员），入群费将捐赠给vn.py社区基金
-
----
-### 环境准备
-
+在[这里](https://github.com/vnpycn/vnpy/releases)下载最新版本，解压后运行以下命令安装：
 **Windows**
 
-推荐使用Windows环境一键安装脚本init.bat，打开cmd后运行即可自动完成以下环境和vn.py框架的下载安装工作。若由于网络不稳定的原因，导致某些步骤安装耗时过长而失败，可以配置好VPN后，手动在cmd中执行失败的命令继续完成安装。
-
-1. 支持的操作系统：Windows 7/8/10/Server 2008
-2. 安装[MongoDB](https://www.mongodb.org/downloads#production)，并[将MongoDB配置为系统服务](https://docs.mongodb.com/manual/tutorial/install-mongodb-on-windows/#configure-a-windows-service-for-mongodb-community-edition)
-3. 安装[Anaconda 5.2.0](http://www.continuum.io/downloads)，**注意必须是Python 2.7 32位版本**
-4. 安装[Visual C++ Redistributable Packages for VS2013 x86版本](https://support.microsoft.com/en-us/help/3138367/update-for-visual-c-2013-and-visual-c-redistributable-package)
+    install.bat
 
 **Ubuntu**
 
-请参考项目wiki中的[教程](https://github.com/vnpy/vnpy/wiki/Ubuntu%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85)。
-
----
-### 项目安装
-
-在[这里](https://github.com/vnpy/vnpy/releases)下载最新版本，解压后:
-
-* Windows：双击运行install.bat自动安装
-* Ubuntu：在Terminal中运行bash install.sh自动安装
-
-**关于TA-Lib安装**
-
-Ubuntu上安装到talib时若遭遇'Permission denied'错误，请在install.sh运行完成后，在Terminal中输入以下命令安装：
-
-```
-sudo /home/vnpy/anaconda2/bin/conda install -c quantopian ta-lib=0.4.9
-```
-
-其中"/home/vnpy/anaconda2/"是你的Anaconda安装路径。
+    bash install.sh
 
 
----
-### Quick Start
+## 使用指南
+
+1. 在[SimNow](http://www.simnow.com.cn/)注册CTP仿真账号，并在[该页面](http://www.simnow.com.cn/product.action)获取经纪商代码以及交易行情服务器地址。
+
+2. VirtualAPi For CTP支持VNPY的CTP框架进行回测，并保证实盘代码和回测代码一模一样 http://www.virutalapi.cn 。
+
+3. 启动VN Station（安装VNConda后会在桌面自动创建快捷方式），输入上一步的账号密码登录
+
+4. 点击底部的**VN Trader Lite**按钮，开始你的交易！！！
+
+注意：
+
+* 在VN Trader的运行过程中请勿关闭VN Station（会自动退出）
+* 如需要灵活配置量化交易应用组件，请使用**VN Trader Pro**
 
 
-1. 在[SimNow](http://simnow.com.cn/)注册CTP仿真账号，记下你的**账号、密码、经纪商编号**，然后下载快期查询你的**交易和行情服务器地址**
+## 脚本运行
 
-2. 找到vn.py应用示例目录examples，打开examples\VN Trader\CTP_connect.json，修改账号、密码、服务器等为上一步注册完成后你的信息（注意使用专门的编程编辑器，如Sublime Text等，防止json编码出错）
+除了基于VN Station的图形化启动方式外，也可以在任意目录下创建run.py，写入以下示例代码：
 
-3. 找到VN Trader的启动入口run.py，并双击运行（若无法双击，则在当前目录按住Shift点鼠标右键，打开cmd输入python run.py运行），run.py内容如下：
-
-```
-# encoding: UTF-8
-
-import sys
-reload(sys)
-
-# vn.trader模块
+```Python
 from vnpy.event import EventEngine
-from vnpy.trader.vtEngine import MainEngine
-from vnpy.trader.uiQt import createQApp
-from vnpy.trader.uiMainWindow import MainWindow
+from vnpy.trader.engine import MainEngine
+from vnpy.trader.ui import MainWindow, create_qapp
+from vnpy.gateway.ctp import CtpGateway
+from vnpy.app.cta_strategy import CtaStrategyApp
+from vnpy.app.cta_backtester import CtaBacktesterApp
 
-# 加载底层接口
-from vnpy.trader.gateway import ctpGateway, ibGateway
-
-# 加载上层应用
-from vnpy.trader.app import (riskManager, ctaStrategy, 
-                             spreadTrading, algoTrading)
-
-
-#----------------------------------------------------------------------
 def main():
-    """主程序入口"""
-    # 创建Qt应用对象
-    qApp = createQApp()
+    """Start VN Trader"""
+    qapp = create_qapp()
 
-    # 创建事件引擎
-    ee = EventEngine()
+    event_engine = EventEngine()
+    main_engine = MainEngine(event_engine)
+    
+    main_engine.add_gateway(CtpGateway)
+    main_engine.add_app(CtaStrategyApp)
+    main_engine.add_app(CtaBacktesterApp)
 
-    # 创建主引擎
-    me = MainEngine(ee)
+    main_window = MainWindow(main_engine, event_engine)
+    main_window.showMaximized()
 
-    # 添加交易接口
-    me.addGateway(ctpGateway)
-    me.addGateway(ibGateway)
+    qapp.exec()
 
-    # 添加上层应用
-    me.addApp(riskManager)
-    me.addApp(ctaStrategy)
-    me.addApp(spreadTrading)
-    me.addApp(algoTrading)
-
-    # 创建主窗口
-    mw = MainWindow(me, ee)
-    mw.showMaximized()
-
-    # 在主线程中启动Qt事件循环
-    sys.exit(qApp.exec_())
-
-
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
-
 ```
 
-更多使用方法方法请参考examples下的其他目录。
+在该目录下打开CMD（按住Shift->点击鼠标右键->在此处打开命令窗口/PowerShell）后运行下列命令启动VN Trader：
 
----
+    python run.py
 
-### 用户文档
+## 贡献代码
 
-项目的最新文档请查看[Github Wiki](https://github.com/vnpy/vnpy/wiki)，知乎专栏和官网文档已经落后于项目开发版本，建议只作为额外的参考资料。
+vn.py使用Github托管其源代码，如果希望贡献代码请使用github的PR(Pull Request)的流程:
 
----
+1. [创建 Issue](https://github.com/vnpycn/vnpy/issues/new) - 对于较大的改动(如新功能，大型重构等)最好先开issue讨论一下，较小的improvement(如文档改进，bugfix等)直接发PR即可
 
-### 开发工具推荐
-
-* [WingIDE](http://wingware.com/)：非常好用的Python集成开发环境（作者就是用它写的vn.py）
-
-* [Visual Studio Code](https://code.visualstudio.com/)：针对编程的文本编辑器，方便阅读项目中的Python、C++、Markdown文件
-
-* [Visual Studio 2013](https://www.visualstudio.com/en-us/downloads/download-visual-studio-vs.aspx)：这个就不多说了（作者编译API封装用的是2013版本）
-
-
----
-### 贡献代码
-
-vn.py使用github托管其源代码，如果希望贡献代码请使用github的PR(Pull Request)的流程:
-
-1. [创建 Issue](https://github.com/vnpy/vnpy/issues/new) - 对于较大的改动(如新功能，大型重构等)最好先开issue讨论一下，较小的improvement(如文档改进，bugfix等)直接发PR即可
-
-2. Fork [vn.py](https://github.com/vnpy/vnpy) - 点击右上角**Fork**按钮
+2. Fork [vn.py](https://github.com/vnpycn/vnpy) - 点击右上角**Fork**按钮
 
 3. Clone你自己的fork: ```git clone https://github.com/$userid/vnpy.git```
 	* 如果你的fork已经过时，需要手动sync：[https://help.github.com/articles/syncing-a-fork/](https://help.github.com/articles/syncing-a-fork/)
@@ -253,31 +216,39 @@ vn.py使用github托管其源代码，如果希望贡献代码请使用github的
 
 5. 在$my_feature_branch上修改并将修改push到你的fork上
 
-6. 创建从你的fork的$my_feature_branch分支到主项目的**dev**分支的[Pull Request] -  [在此](https://github.com/vnpy/vnpy/compare?expand=1)点击**compare across forks**，选择需要的fork和branch创建PR
+6. 创建从你的fork的$my_feature_branch分支到主项目的**dev**分支的[Pull Request] -  [在此](https://github.com/wdgwz/vnpy/compare?expand=1)点击**compare across forks**，选择需要的fork和branch创建PR
 
 7. 等待review, 需要继续改进，或者被Merge!
 
----
-### 项目捐赠
+在提交代码的时候，请遵守以下规则，以提高代码质量：
 
-过去4年中收到过许多社区用户的捐赠，在此深表感谢！所有的捐赠资金都投入到了vn.py社区基金中，用于支持vn.py项目的运作。
-
-先强调一下：**vn.py是开源项目，可以永久免费使用，并没有强制捐赠的要求！！！**
-
-捐赠方式：支付宝3216630132@qq.com（*晓优）
-
-长期维护捐赠清单，请在留言中注明是项目捐赠以及捐赠人的名字。
+  * 使用[autopep8](https://github.com/hhatto/autopep8)格式化你的代码。运行```autopep8 --in-place --recursive . ```即可。
+  * 使用[flake8](https://pypi.org/project/flake8/)检查你的代码，确保没有error和warning。在项目根目录下运行```flake8```即可。
 
 
----
-### 其他内容
 
-* [获取帮助](https://github.com/vnpy/vnpy/blob/dev/docs/SUPPORT.md)
-* [社区行为准侧](https://github.com/vnpy/vnpy/blob/dev/docs/CODE_OF_CONDUCT.md)
-* [Issue模板](https://github.com/vnpy/vnpy/blob/dev/docs/ISSUE_TEMPLATE.md)
-* [PR模板](https://github.com/vnpy/vnpy/blob/dev/docs/PULL_REQUEST_TEMPLATE.md)
+## 项目捐赠
+
+过去5年中收到过许多社区用户的捐赠，在此深表感谢！所有的捐赠资金都投入到了vn.py社区基金中，用于支持vn.py项目的运作。
+
+先强调一下：**vn.py是开源项目，可以永久免费使用 ！！！**
+
+VNPY原始作者：用Python的程序员 还有其他为VNPY做出贡献的其他作者
 
 
----
-### License
+## 其他内容
+
+* [获取帮助](https://github.com/vnpycn/vnpy/blob/dev/docs/SUPPORT.md)
+* [社区行为准侧](https://github.com/vnpycn/vnpy/blob/dev/docs/CODE_OF_CONDUCT.md)
+* [Issue模板](https://github.com/vnpycn/vnpy/blob/dev/docs/ISSUE_TEMPLATE.md)
+* [PR模板](https://github.com/vnpycn/vnpy/blob/dev/docs/PULL_REQUEST_TEMPLATE.md)
+
+ [.](https://github.com/wdgwz/vnpy) 
+ [.](https://www.vnpy.cn) 
+## 版权说明
+
 MIT
+  
+
+
+
