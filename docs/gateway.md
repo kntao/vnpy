@@ -71,26 +71,48 @@ def main():
 
 ## 接口分类
 
-| 接口     |                    类型                    |
-| -------- | :----------------------------------------: |
-| CTP      |                    期货                    |
-| FEMAS    |                    期货                    |
-| XTP      | 国内股票、指数、基金、债券、期权、融资融券 |
-| OES      |                  国内股票                  |
-| TORA     |                  国内股票                  |
-| IB       |            外盘股票、期货、期权            |
-| TAP      |               外盘期货、期权               |
-| FUTU     |            国内股票、港股、美股            |
-| TIGER    |            国内股票、港股、美股            |
-| ALPACA   |                    美股                    |
-| BITFINEX |                  数字货币                  |
-| BITMEX   |                  数字货币                  |
-| OKEX     |                  数字货币                  |
-| OKEXF    |                  数字货币                  |
-| HUOBI    |                  数字货币                  |
-| HBDM     |                  数字货币                  |
-| ONETOKEN |                  数字货币                  |
-| RPC      |                  RPC服务                   |
+| 接口          |                    类型                         |
+| ------------  | :--------------------------------------------: |
+| CTP           |           期货、期货期权（实盘6.3.15）            |
+| CTP测试       |           期货、期货期权（测试6.3.16）            |
+| CTP Mini      |            期货、期货期权（实盘1.4）             |
+| CTP Mini测试  |            期货、期货期权（测试1.2）              |
+| 飞马          |                    期货                         |
+| CTP期权       |             ETF期权（实盘20190802）              |
+| CTP期权测试    |            ETF期权（实盘20190604）              |
+| 飞创期权       |            ETF期权（实盘20200427）              |
+| 恒生UFT       |                期货、ETF期权                     |
+| 恒生期权       |                  ETF期权                        |
+| 中泰XTP       |              A股、两融、ETF期权                  |
+| 华鑫奇点       |                    A股                          |
+| 宽睿          |                A股、ETF期权                      |
+| 中亿汇达Comstar|                银行间市场                       |
+| 富途证券       |                 港股、美股                      |
+| 盈透证券       |                 海外全品种                      |
+| 老虎证券       |                  外盘期货                       |
+| 易盛9.0外盘    |                  外盘期货                       |
+| 直达期货       |                  国内股票                       |
+| MetaTrader 5  |            外汇、CFD、股票、期货                 |
+| 币安           |                  数字货币                       |
+| 币安永续合约   |             数字货币永续和期货                   |
+| 火币          |                   数字货币                      |
+| 火币期货       |                数字货币期货                     |
+| 火币永续       |                数字货币永续                     |
+| OKEX           |                  数字货币                      |
+| OKEX期货       |                数字货币期货                     |
+| OKEX永续       |                数字货币永续                     |
+| OKEX期权       |                数字货币期权                     |
+| BitMEX        |              数字货币期货、永续                  |
+| Bybit         |                 数字货币永续                     |
+| Gate.io合约    |                数字货币永续                      |
+| Deribit        |             数字货币永续、期权                   |
+| Bitfinex       |                  数字货币                       |
+| Coinbase       |                  数字货币                       |
+| Bitstamp       |                  数字货币                       |
+| 1Token         |                   数字货币                      |
+| 融航           |                  期货资管                       |
+| 鑫管家         |                  期货资管                        |
+| RPC服务        |                核心交易路由                      |
 
 
 
@@ -128,6 +150,37 @@ main_engine.add_gateway(CtpGateway)
 - 仿真账号：从SimNow网站上获取。只需输入手机号码和短信验证即可。（短信验证有时只能在工作日正常工作时段收到）SimNow的用户名为6位纯数字，经纪商编号为9999，并且提供2套环境用于盘中仿真交易以及盘后的测试。
   
 - 实盘账号：在期货公司开户，通过联系客户经理可以开通。用户名为纯数字，经纪商编号也是4位纯数字。（每个期货公司的经纪商编号都不同）另外，实盘账号也可以开通仿真交易功能，同样需要联系客户经理。
+
+
+&nbsp;
+
+### MINI
+
+#### 如何加载
+
+先从gateway上调用MiniGateway类；然后通过add_gateway()函数添加到main_engine上。
+```
+from vnpy.gateway.mini import MiniGateway
+main_engine.add_gateway(MiniGateway)
+```
+
+&nbsp;
+
+#### 相关字段
+
+- 用户名：username
+- 密码：password：
+- 经纪商编号：brokerid
+- 交易服务器地址：td_address
+- 行情服务器地址：md_address
+- 产品名称：product_info
+- 授权编码：auth_code
+  
+&nbsp;
+
+#### 获取账号
+
+在期货公司开户，通过联系客户经理可以开通。用户名为纯数字，经纪商编号也是4位纯数字。（每个期货公司的经纪商编号都不同）另外，实盘账号也可以开通仿真交易功能，同样需要联系客户经理。
 
 
 &nbsp;
@@ -248,11 +301,27 @@ main_engine.add_gateway(OesGateway)
 
 #### 如何加载
 
+先从gateway上调用ToraGateway类；然后通过add_gateway()函数添加到main_engine上。
+```
+from vnpy.gateway.tota import ToraGateway
+main_engine.add_gateway(ToraGateway)
+```
+
+&nbsp;
+
 #### 相关字段
+
+- 账号: username
+- 密码: password
+- 交易服务器: td_address
+- 行情服务器: md_address
+
+&nbsp;
 
 #### 获取账号
 
-#### 其他特点
+测试账号请联系华鑫证券申请
+
 
 &nbsp;
 
@@ -400,11 +469,21 @@ main_engine.add_gateway(TigerGateway)
 ### ALPACA
 
 #### 如何加载
+先从gateway上调用AlpacaGateway类；然后通过add_gateway()函数添加到main_engine上。
+```
+from vnpy.gateway.alpaca import AlpacaGateway
+main_engine.add_gateway(AlpacaGateway)
+```
+
+&nbsp;
 
 #### 相关字段
-
+- KEY ID: key
+- Secret Key: secret
+- 会话数: 10
+- 服务器:["REAL", "PAPER"]
 #### 获取账号
-
+在OKEX官网开户并且入金后可以获得API接入权限。
 #### 其他特点
 
 &nbsp;
@@ -553,14 +632,14 @@ main_engine.add_gateway(HuobiGateway)
 
 
 
-### 火币合约(HBDM)
+### 火币合约(HUOBIF)
 
 #### 如何加载
 
-先从gateway上调用HbdmGateway类；然后通过add_gateway()函数添加到main_engine上。
+先从gateway上调用HuobifGateway类；然后通过add_gateway()函数添加到main_engine上。
 ```
-from vnpy.gateway.hbdm import HbdmGateway
-main_engine.add_gateway(HbdmGateway)
+from vnpy.gateway.huobif import HuobifGateway
+main_engine.add_gateway(HuobifGateway)
 ```
 
 &nbsp;
@@ -657,15 +736,60 @@ main_engine.add_gateway(OnetokenGateway)
 
 &nbsp;
 
+&nbsp;
+
+### BINANCE
+
+#### 如何加载
+
+先从gateway上调用BinanceGateway类；然后通过add_gateway()函数添加到main_engine上。
+```
+from vnpy.gateway.binance import BinanceGateway
+main_engine.add_gateway(BinanceGateway)
+```
+
+&nbsp;
+
+
+#### 相关字段
+
+- Key秘钥
+- secret
+- session_number(会话数)：3
+- proxy_host
+- proxy_port
+
+&nbsp;
+
+
+#### 获取账号
+
+在BINANCE官网开户并且入金后可以获得API接入权限。
+
+&nbsp;
+
 
 ### RPC
 
 #### 如何加载
 
+RPC的加载涉及到服务端和客户端
+- 服务端：运行vntrader时加载rpc_service模块
+    ```
+    from vnpy.app.rpc_service import RpcService
+    ```
+    启动vntrader后，首先连接外部交易交易如CTP，然后点击菜单栏"功能"->"RPC服务"，点击"启动"
+- 客户端：运行vntrader时加载RpcGateway
+    ```
+    from vnpy.gateway.rpc import RpcGateway
+    ```
+    启动vntrader后，连接rpc接口即可。
+
 #### 相关字段
+在服务端和客户端，使用默认填好的参数即可
 
 #### 获取账号
+使用rpc无须额外申请账号，只需要一个外部接口账号
 
 #### 其他特点
-
-&nbsp;
+rpc服务支持同一外部接口数据在本地多进程分发，比如在服务端连接了ctp接口，订阅了rb1910后，客户端多个进程会自动订阅来自服务端分发的订阅数据# 交易接口
